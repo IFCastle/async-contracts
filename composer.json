@@ -12,5 +12,10 @@
     "require": {
     },
     "require-dev": {
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.5.x-dev"
+        }
     }
 }
