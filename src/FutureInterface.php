@@ -9,7 +9,7 @@ interface FutureInterface
     
     public function ignore(): void;
     
-    public function await(CancellationInterface $cancellation = null): mixed;
+    public function await(?CancellationInterface $cancellation = null): mixed;
     
     /**
      * Attaches a callback that is invoked if this future completes. The returned future is completed with the return

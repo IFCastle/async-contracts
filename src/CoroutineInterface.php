@@ -13,5 +13,5 @@ interface CoroutineInterface
     
     public function isFinished(): bool;
     
-    public function stop(\Throwable $throwable = null): bool;
+    public function stop(?\Throwable $throwable = null): bool;
 }
