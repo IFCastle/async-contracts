@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace IfCastle\Async;
@@ -17,12 +18,12 @@ interface ChannelInterface extends ClosableInterface
      * Receive data from the channel and block until the data is sent by the sender.
      */
     public function receive(): mixed;
-    
+
     /**
      * Return a true if the channel is empty.
      */
     public function isEmpty(): bool;
-    
+
     /**
      * Return a true if the channel is full.
      */

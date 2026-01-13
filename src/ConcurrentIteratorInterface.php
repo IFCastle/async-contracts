@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace IfCastle\Async;
@@ -25,7 +26,7 @@ interface ConcurrentIteratorInterface extends \IteratorAggregate
      * @return bool `true` if a value is available, `false` if the iterator has completed.
      */
     public function continue(?CancellationInterface $cancellation = null): bool;
-    
+
     /**
      * Returns the current value of the iterator for the current fiber.
      *
@@ -36,7 +37,7 @@ interface ConcurrentIteratorInterface extends \IteratorAggregate
      * not been called, an {@see \Error} will be thrown.
      */
     public function getValue(): mixed;
-    
+
     /**
      * Returns the current position of the iterator for the current fiber.
      *
@@ -47,13 +48,13 @@ interface ConcurrentIteratorInterface extends \IteratorAggregate
      * not been called, an {@see \Error} will be thrown.
      */
     public function getPosition(): int;
-    
+
     /**
      * @return bool `true` if the iterator has completed (either successfully or with an error) or `false`
      * if the iterator may still emit more values.
      */
     public function isComplete(): bool;
-    
+
     /**
      * Disposes the iterator, indicating the consumer is no longer interested in the iterator output.
      */

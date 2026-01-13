@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace IfCastle\Async;
@@ -10,14 +11,14 @@ interface ClosableInterface
      * Whether pending operations are aborted or not is implementation-dependent.
      */
     public function close(): void;
-    
+
     /**
      * Returns whether this resource has been closed.
      *
      * @return bool `true` if closed, otherwise `false`.
      */
     public function isClosed(): bool;
-    
+
     /**
      * Registers a callback that is invoked when this resource is closed.
      *
