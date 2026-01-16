@@ -37,6 +37,7 @@ interface CoroutineSchedulerInterface
      * Unwraps the first completed future.
      *
      * If you want the first future completed without an error, use {@see awaitFirstSuccessful()} instead.
+     * @param iterable<int|string, FutureInterface> $futures
      */
     public function awaitFirst(iterable $futures, ?CancellationInterface $cancellation = null): mixed;
 
@@ -44,6 +45,7 @@ interface CoroutineSchedulerInterface
      * Unwraps the first completed future without an error.
      *
      * If you want the first future completed, regardless of whether it completed with an error, use {@see awaitFirst()} instead.
+     * @param iterable<int|string, FutureInterface> $futures
      */
     public function awaitFirstSuccessful(iterable $futures, ?CancellationInterface $cancellation = null): mixed;
 
