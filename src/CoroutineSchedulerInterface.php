@@ -87,6 +87,7 @@ interface CoroutineSchedulerInterface
      * Returns a new queue.
      *
      *
+     * @return QueueInterface<mixed>
      */
     public function createQueue(int $size = 0): QueueInterface;
 

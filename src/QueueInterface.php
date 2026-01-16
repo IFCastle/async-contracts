@@ -16,7 +16,7 @@ interface QueueInterface
 
     /**
      * @param T $value
-     * @return FutureInterface<T>
+     * @return FutureInterface<null>
      */
     public function pushWithPromise(mixed $value): FutureInterface;
 
