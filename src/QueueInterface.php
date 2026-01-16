@@ -4,14 +4,30 @@ declare(strict_types=1);
 
 namespace IfCastle\Async;
 
+/**
+ * @template T
+ */
 interface QueueInterface
 {
+    /**
+     * @param T $value
+     */
     public function pushAsync(mixed $value): void;
 
+    /**
+     * @param T $value
+     * @return FutureInterface<T>
+     */
     public function pushWithPromise(mixed $value): FutureInterface;
 
+    /**
+     * @param T $value
+     */
     public function push(mixed $value): void;
 
+    /**
+     * @return ConcurrentIteratorInterface<T>
+     */
     public function getIterator(): ConcurrentIteratorInterface;
 
     /**

@@ -37,7 +37,7 @@ interface CoroutineSchedulerInterface
      * Unwraps the first completed future.
      *
      * If you want the first future completed without an error, use {@see awaitFirstSuccessful()} instead.
-     * @param iterable<int|string, FutureInterface> $futures
+     * @param iterable<int|string, FutureInterface<mixed>> $futures
      */
     public function awaitFirst(iterable $futures, ?CancellationInterface $cancellation = null): mixed;
 
@@ -45,7 +45,7 @@ interface CoroutineSchedulerInterface
      * Unwraps the first completed future without an error.
      *
      * If you want the first future completed, regardless of whether it completed with an error, use {@see awaitFirst()} instead.
-     * @param iterable<int|string, FutureInterface> $futures
+     * @param iterable<int|string, FutureInterface<mixed>> $futures
      */
     public function awaitFirstSuccessful(iterable $futures, ?CancellationInterface $cancellation = null): mixed;
 
@@ -53,7 +53,7 @@ interface CoroutineSchedulerInterface
      * Unwraps all completed futures.
      *
      * If you want the all future completed, use {@see awaitAnyN()} instead.
-     * @param iterable<FutureInterface> $futures
+     * @param iterable<FutureInterface<mixed>> $futures
      * @return array<mixed>
      */
     public function awaitAll(iterable $futures, ?CancellationInterface $cancellation = null): array;
