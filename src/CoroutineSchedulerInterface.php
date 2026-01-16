@@ -51,6 +51,8 @@ interface CoroutineSchedulerInterface
      * Unwraps all completed futures.
      *
      * If you want the all future completed, use {@see awaitAnyN()} instead.
+     * @param iterable<FutureInterface> $futures
+     * @return array<mixed>
      */
     public function awaitAll(iterable $futures, ?CancellationInterface $cancellation = null): array;
 
