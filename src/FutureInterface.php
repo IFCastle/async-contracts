@@ -31,16 +31,15 @@ interface FutureInterface
     /**
      * Attaches a callback that is invoked if this future errors.
      *
-     * @template TReturn
-     * @param callable(\Throwable): TReturn $onRejected
-     * @return FutureInterface<TReturn>
+     * @param callable(\Throwable): T $onRejected
+     * @return static
      */
     public function catch(callable $onRejected): static;
 
     /**
      * Attaches a callback that is always invoked when the future is completed.
      *
-     * @return FutureInterface<T>
+     * @return static
      */
     public function finally(callable $onFinally): static;
 }
